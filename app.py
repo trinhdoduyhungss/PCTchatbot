@@ -31,32 +31,6 @@ database = server['ChatApp']
 
 messageCollection = database['messages']
 
-
-def seed_data():
-    if messageCollection.count() > 0:
-        print("Collection is not null")
-        return
-    else:
-        content = """Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ab reiciendis unde debitis, veritatis quis delectus eaque, dolores quaerat, fuga veniam repudiandae consequatur dignissimos eos doloribus assumenda distinctio! Laboriosam, placeat."""
-        for i in range(10):
-            record = None
-            if (i % 2 == 0):
-                record = {
-                    "isBot": False,
-                    "content": content,
-                    "time": time.time()
-                }
-            else:
-                record = {
-                    "isBot": True,
-                    "content": content,
-                    "time": time.time()
-                }
-            messageCollection.insert_one(record)
-            time.sleep(2)
-        print("Seeded successfully")
-seed_data()
-
 response = {
     "hello": [
         "Xin chào bạn.",
@@ -247,4 +221,6 @@ def test():
     }
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
+    # app.run(debug=True)
