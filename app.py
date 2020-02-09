@@ -23,7 +23,9 @@ model_path = 'sentiment_model9.h5'
 keras_text_classifier = TextClassifier(word2vec_dict=word2vec_dict, model_path=model_path,max_length=20, n_epochs=20, n_class=8)
 labels = {1: 'chemistry', 2: 'general_asking', 6: 'math', 3: 'goodbye', 4: 'hello', 5: 'introduction', 7: 'thanks',
           0: 'ask_weather'}
-
+test_sentence = ['tìm x biết x+2=0']
+test = keras_text_classifier.classify(test_sentence, label_dict=labels)
+print('test', test)
 server = pymongo.MongoClient("mongodb+srv://Hung:1@cluster0-3izqd.mongodb.net/test?retryWrites=true&w=majority")
 database = server['ChatApp']
 
