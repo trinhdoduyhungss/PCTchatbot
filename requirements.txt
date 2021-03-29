@@ -100,7 +100,7 @@ pycodestyle==2.5.0
 pydot==1.4.1
 pygame==1.9.6
 pyglet==1.4.8
-Pygments==2.4.2
+Pygments==2.7.4
 pylint==2.3.1
 pymongo==3.9.0
 pyparsing==2.4.2
