@@ -79,7 +79,7 @@ nmslib==2.0.5
 notebook==6.0.2
 numba==0.46.0
 numpy==1.17.0
-opencv-python==3.3.0.10
+opencv-python==3.4.7.28
 pandas==0.25.0
 pandocfilters==1.4.2
 parso==0.5.1
