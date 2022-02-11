@@ -94,7 +94,7 @@ preshed==3.0.2
 prometheus-client==0.7.1
 prompt-toolkit==2.0.10
 protobuf==3.15.0
-psutil==5.6.5
+psutil==5.6.6
 pybind11==2.3.0
 pycodestyle==2.5.0
 pydot==1.4.1
